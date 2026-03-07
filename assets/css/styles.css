@@ -225,6 +225,15 @@ body {
     color: var(--accent-light);
 }
 
+/* Calendar today highlight */
+.cal-today {
+    background: var(--accent);
+    color: var(--bg-page);
+    border-radius: 50%;
+    padding: 0 3px;
+    font-weight: bold;
+}
+
 /* ASCII Art styles */
 .ascii-art {
     color: var(--accent);

@@ -470,8 +470,15 @@
 
     commands.calendar = (args) => {
         const now = new Date();
-        let month = args && args[0] ? parseInt(args[0]) - 1 : now.getMonth();
-        let year = args && args[1] ? parseInt(args[1]) : now.getFullYear();
+        const monthNames = ['january','february','march','april','may','june','july','august','september','october','november','december'];
+        let month, year;
+        if (args && args[0]) {
+            const m = monthNames.indexOf(args[0].toLowerCase());
+            month = m !== -1 ? m : parseInt(args[0]) - 1;
+        } else {
+            month = now.getMonth();
+        }
+        year = args && args[1] ? parseInt(args[1]) : now.getFullYear();
         if (isNaN(month) || month < 0 || month > 11) month = now.getMonth();
         if (isNaN(year)) year = now.getFullYear();
         const display = new Date(year, month, 1);
@@ -480,11 +487,16 @@
         print("─".repeat(20), "hint");
         const firstDay = new Date(year, month, 1).getDay();
         const daysInMonth = new Date(year, month + 1, 0).getDate();
-        const today = (month === now.getMonth() && year === now.getFullYear()) ? now.getDate() : -1;
+        const isCurrentMonth = (month === now.getMonth() && year === now.getFullYear());
+        const today = isCurrentMonth ? now.getDate() : -1;
         let row = "   ".repeat(firstDay);
         for (let d = 1; d <= daysInMonth; d++) {
             const dayStr = String(d).padStart(2, " ");
-            row += (d === today ? `<span class='accent'>${dayStr}</span>` : dayStr);
+            if (d === today) {
+                row += `<span class='cal-today'>${dayStr}</span>`;
+            } else {
+                row += dayStr;
+            }
             if ((firstDay + d) % 7 === 0) { print(row); row = ""; }
             else row += " ";
         }
