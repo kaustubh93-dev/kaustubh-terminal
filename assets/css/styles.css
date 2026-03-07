@@ -28,17 +28,17 @@
 }
 
 [data-theme="hacker"] {
-    --bg-page: #000000;
-    --bg-window: #000000;
-    --bg-header: #000000;
-    --bg-input: #000000;
-    --border-color: #004400;
-    --fg: hsl(120, 100%, 50%);
-    --muted: hsl(132, 100%, 53%);
-    --accent: hsl(132, 100%, 53%);
-    --accent-light: hsl(120, 100%, 50%);
-    --error: #ff0000;
-    --glow: 0 0 10px rgba(0, 255, 0, 0.6);
+    --bg-page: #0a0a0a;
+    --bg-window: #0a0a0a;
+    --bg-header: #0d0d0d;
+    --bg-input: #0a0a0a;
+    --border-color: #1a3a1a;
+    --fg: #00ff41;
+    --muted: #00802a;
+    --accent: #00ffcc;
+    --accent-light: #7dffb3;
+    --error: #ff3333;
+    --glow: 0 0 10px rgba(0, 255, 65, 0.4);
 }
 
 body {
