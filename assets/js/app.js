@@ -193,13 +193,22 @@
         promptEl.innerHTML = `<span style="color:var(--accent)">${escapeHtml(username)}@${TERM.site.domain}:~$ </span>`;
     }
 
+    const suggestionsEl = document.getElementById("suggestions");
+
     function updateHint() {
         if (!hintEl) return;
         const token = buffer.trim().toLowerCase();
+        // Clear suggestions
+        if (suggestionsEl) suggestionsEl.innerHTML = "";
+
         if (!token) { hintEl.textContent = ""; return; }
+
         const cmdNames = commandRegistry.map(c => c.command).filter(c => c !== '?');
-        const match = cmdNames.find(c => c.startsWith(token) && c !== token);
-        if (match) {
+        const matches = [...new Set(cmdNames)].filter(c => c.startsWith(token) && c !== token);
+
+        // Inline hint (first match)
+        if (matches.length > 0) {
+            const match = matches[0];
             const entry = commandRegistry.find(c => c.command === match);
             const remainder = match.slice(buffer.length);
             const syntax = entry && entry.args ? " " + entry.args : "";
@@ -211,6 +220,18 @@
             } else {
                 hintEl.textContent = "";
             }
+        }
+
+        // Suggestion list below (show all matches)
+        if (suggestionsEl && matches.length > 1) {
+            suggestionsEl.innerHTML = matches
+                .slice(0, 8)
+                .map(cmd => {
+                    const entry = commandRegistry.find(c => c.command === cmd);
+                    const desc = entry ? entry.description : "";
+                    return `<span>${cmd}</span> <span style="opacity:0.6">— ${desc}</span>`;
+                })
+                .join("<br>");
         }
     }
 
@@ -1332,6 +1353,16 @@
         const now = new Date();
         if (dateEl) dateEl.textContent = now.toLocaleString('en-US', { month: 'short', day: 'numeric', hour: '2-digit', minute: '2-digit' });
         if (yearEl) yearEl.textContent = now.getFullYear();
+
+        // Session timer
+        const timerEl = document.getElementById("session-timer");
+        if (timerEl) {
+            const elapsed = Math.floor((Date.now() - STATS.bootTime) / 1000);
+            const h = String(Math.floor(elapsed / 3600)).padStart(2, '0');
+            const m = String(Math.floor((elapsed % 3600) / 60)).padStart(2, '0');
+            const s = String(elapsed % 60).padStart(2, '0');
+            timerEl.textContent = `⏱ ${h}:${m}:${s}`;
+        }
     }
     setInterval(updateStatusBarTime, 1000);
     updateStatusBarTime();
