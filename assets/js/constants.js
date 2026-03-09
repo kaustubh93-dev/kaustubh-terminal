@@ -1,6 +1,6 @@
 window.TERM = {
     site: {
-        domain: "kausha.in",
+        domain: "kaustubh.in",
         owner: "Kaustubh",
         email: "sharma.kaustubh93@gmail.com",
         socials: {
