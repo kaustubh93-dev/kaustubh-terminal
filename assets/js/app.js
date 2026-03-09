@@ -54,7 +54,6 @@
         { command: "json", description: "Fetch and pretty-print JSON from URL", args: "<url>" },
         { command: "lowercase", description: "Convert text to lowercase", args: "<text>" },
         { command: "matrix", description: "Toggle Matrix rain overlay", args: "[on|off]" },
-        { command: "photo", description: "Display ASCII art portrait" },
         { command: "ping", description: "Measure request latency", args: "<url>" },
         { command: "projects", description: "List my projects" },
         { command: "qr", description: "Generate QR code image", args: "<text>" },
@@ -324,7 +323,6 @@
 
     // --- Info ---
     commands.about = () => printBlock(TERM.aboutText);
-    commands.photo = () => print(TERM.photoAscii);
     commands.projects = () => printBlock(TERM.projectsText);
     commands.skills = () => printBlock(TERM.skillsText);
     commands.social = (args) => {
