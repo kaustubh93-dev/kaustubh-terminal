@@ -10,30 +10,51 @@ window.TERM = {
     },
 
     banner: `
-<span style="white-space: pre; display: block; overflow-x: auto; line-height: 1.2; color: var(--accent);">                 ....::::::. 
-              ..::--========
-            ..:--===========
-           .::-=============
-         .::---===++++++++++
-         :-:---=====++++++++
-         :::=o****o+++======
-      ...:-o*8#%@@%WW&amp;ooo*&amp;*
-      ++=:+&amp;W#%%@@@%8oo*W@@@    <span style="color: var(--fg);"> ██╗  ██╗ █████╗ ██╗   ██╗███████╗████████╗██╗   ██╗██████╗ ██╗  ██╗</span>
-     .+o=-oo*&amp;8W#WW8+-=+W@@%    <span style="color: var(--fg);"> ██║ ██╔╝██╔══██╗██║   ██║██╔════╝╚══██╔══╝██║   ██║██╔══██╗██║  ██║</span>
-     .+*:----==+oo+=----o&amp;8W    <span style="color: var(--fg);"> █████╔╝ ███████║██║   ██║███████╗   ██║   ██║   ██║██████╔╝███████║</span>
-     .=+-----=o*o+=-----=o+=    <span style="color: var(--fg);"> ██╔═██╗ ██╔══██║██║   ██║╚════██║   ██║   ██║   ██║██╔══██╗██╔══██║</span>
-...   :++++o&amp;W8&amp;**+------+&amp;o    <span style="color: var(--fg);"> ██║  ██╗██║  ██║╚██████╔╝███████║   ██║   ╚██████╔╝██████╔╝██║  ██║</span>
-.......*8&amp;*8@@@@@@@#88##W*&amp;&amp;    <span style="color: var(--fg);"> ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═╝  ╚═╝...</span>
-.......*##8#@@@%WW##%%@@@@%#
-..... .=#%##@@8&amp;*&amp;***&amp;WW%@@@
-....:-:.o@@@@%8*&amp;88888&amp;&amp;8#@%
-....=+--oW@@@%WW#%@@@%#8W%@%
-.::-=+8@@oW@@@%WW8W##WW#%@@@
-W##%%@@@%oo8%@@@%%%###%@@@@%
-@@@@@@@@Wo+o*8#%@@@@@@@@%W8&amp;
-@@@@@@@#*oo++o**&amp;8WWWW8***8%
-@@@@@@W*o+o+++o**&amp;&amp;*ooo*&amp;#@@</span>
-  <span style="color:var(--fg); font-weight: 500;">Welcome to Kaustubh's Terminal Portfolio</span>
+<div style="display: flex; align-items: center; gap: 24px; overflow-x: auto;">
+  <pre style="color: var(--accent); line-height: 1.15; font-size: 0.72em; margin: 0; flex-shrink: 0;">                      ..........   
+                  ...:---======--:.
+                ..:--=============-
+              .::--================
+             .:---=====+===========
+            .-:--====+++++++++++++=
+            :-:---======++====++++=
+           .::-=o*****o+++========-
+         . .:-o*8W#%@%#W8*ooo****o+
+        :++-:+*W##%@@@%W*o**W%%@@%#
+        :oo-=o*&amp;&amp;8W###W&amp;===o#@@%@%#
+        :oo:---=++oooo+=---=&amp;8WW###
+        :o+:-:---=+oo+=-----=oooo*o
+....... .======+*&amp;&amp;o==----:-=oo=---
+.........-**oo*#%#WW#W*++++oo+&amp;&amp;+==
+.........-8W8&amp;W@@@@@@@@%%%@@%888*oo
+.........:8##8W@@%%888&amp;8W###%@@@W**
+..........o####@@8**&amp;&amp;*&amp;*&amp;WW#%@@#&amp;8
+......:=-:.&amp;@@@@%8&amp;*888888&amp;*8#@%8#%
+:::...:o=--*#@@@%W8W#%@@%#W8W#@%%@%
+....:::-+W@%o#@@@%W888W##WWW#@@@@#-
+**&amp;&amp;8##%@@@#+*W%@@@%##WWW#%@@@@@8WW
+@@@@@%@@@@@8o+o&amp;W%@@@@@@@@@@@#W&amp;8@@
+@@@@@@@@@@#*o++oo&amp;&amp;8W##%%#W8&amp;**W@@@
+@@@@@@@@@W&amp;ooo+++oo**&amp;&amp;&amp;**oo*8%@@@@
+@@@@@@@@W*++=o++++oo*oo++o*&amp;W@@@@@@
+@@@@@@@@&amp;+===++++++++++o*&amp;W#@@@@@@@
+@@@@@@@@8-----=-======+*&amp;8%@@@@@@@@
+@@@@@@@@#=::::-------==oW@@@@@@@@@@
+@@@@@@@@@8-:::-------=8%@@@@@@@@@@@</pre>
+  <div style="display: flex; flex-direction: column; justify-content: center; min-width: 0;">
+    <pre style="color: var(--fg); line-height: 1.1; margin: 0; font-size: 0.85em;"> ██╗  ██╗ █████╗ ██╗   ██╗███████╗████████╗██╗   ██╗██████╗ ██╗  ██╗
+ ██║ ██╔╝██╔══██╗██║   ██║██╔════╝╚══██╔══╝██║   ██║██╔══██╗██║  ██║
+ █████╔╝ ███████║██║   ██║███████╗   ██║   ██║   ██║██████╔╝███████║
+ ██╔═██╗ ██╔══██║██║   ██║╚════██║   ██║   ██║   ██║██╔══██╗██╔══██║
+ ██║  ██╗██║  ██║╚██████╔╝███████║   ██║   ╚██████╔╝██████╔╝██║  ██║
+ ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═╝  ╚═╝</pre>
+    <div style="margin-top: 12px; color: var(--muted); font-size: 0.9em; line-height: 1.6;">
+      <span style="color: var(--accent); font-weight: bold;">Cloud Solution Architect</span> · 9.5+ yrs in Infrastructure &amp; Cloud<br>
+      Azure · Windows Server · Terraform · PowerShell · Docker<br>
+      <span style="color: var(--muted); font-style: italic;">📍 Thane, India · 📧 sharma.kaustubh93@gmail.com</span>
+    </div>
+  </div>
+</div>
 `,
 
     shutdownSequence: [
