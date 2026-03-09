@@ -10,51 +10,31 @@ window.TERM = {
     },
 
     banner: `
-<div style="display: flex; align-items: center; gap: 24px; overflow-x: auto;">
-  <pre style="color: var(--accent); line-height: 1.15; font-size: 0.72em; margin: 0; flex-shrink: 0;">                      ..........   
-                  ...:---======--:.
-                ..:--=============-
-              .::--================
-             .:---=====+===========
-            .-:--====+++++++++++++=
-            :-:---======++====++++=
-           .::-=o*****o+++========-
-         . .:-o*8W#%@%#W8*ooo****o+
-        :++-:+*W##%@@@%W*o**W%%@@%#
-        :oo-=o*&amp;&amp;8W###W&amp;===o#@@%@%#
-        :oo:---=++oooo+=---=&amp;8WW###
-        :o+:-:---=+oo+=-----=oooo*o
-....... .======+*&amp;&amp;o==----:-=oo=---
-.........-**oo*#%#WW#W*++++oo+&amp;&amp;+==
-.........-8W8&amp;W@@@@@@@@%%%@@%888*oo
-.........:8##8W@@%%888&amp;8W###%@@@W**
-..........o####@@8**&amp;&amp;*&amp;*&amp;WW#%@@#&amp;8
-......:=-:.&amp;@@@@%8&amp;*888888&amp;*8#@%8#%
-:::...:o=--*#@@@%W8W#%@@%#W8W#@%%@%
-....:::-+W@%o#@@@%W888W##WWW#@@@@#-
-**&amp;&amp;8##%@@@#+*W%@@@%##WWW#%@@@@@8WW
-@@@@@%@@@@@8o+o&amp;W%@@@@@@@@@@@#W&amp;8@@
-@@@@@@@@@@#*o++oo&amp;&amp;8W##%%#W8&amp;**W@@@
-@@@@@@@@@W&amp;ooo+++oo**&amp;&amp;&amp;**oo*8%@@@@
-@@@@@@@@W*++=o++++oo*oo++o*&amp;W@@@@@@
-@@@@@@@@&amp;+===++++++++++o*&amp;W#@@@@@@@
-@@@@@@@@8-----=-======+*&amp;8%@@@@@@@@
-@@@@@@@@#=::::-------==oW@@@@@@@@@@
-@@@@@@@@@8-:::-------=8%@@@@@@@@@@@</pre>
-  <div style="display: flex; flex-direction: column; justify-content: center; min-width: 0;">
-    <pre style="color: var(--fg); line-height: 1.1; margin: 0; font-size: 0.85em;"> ██╗  ██╗ █████╗ ██╗   ██╗███████╗████████╗██╗   ██╗██████╗ ██╗  ██╗
- ██║ ██╔╝██╔══██╗██║   ██║██╔════╝╚══██╔══╝██║   ██║██╔══██╗██║  ██║
- █████╔╝ ███████║██║   ██║███████╗   ██║   ██║   ██║██████╔╝███████║
- ██╔═██╗ ██╔══██║██║   ██║╚════██║   ██║   ██║   ██║██╔══██╗██╔══██║
- ██║  ██╗██║  ██║╚██████╔╝███████║   ██║   ╚██████╔╝██████╔╝██║  ██║
- ╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝    ╚═════╝ ╚═════╝ ╚═╝  ╚═╝</pre>
-    <div style="margin-top: 12px; color: var(--muted); font-size: 0.9em; line-height: 1.6;">
-      <span style="color: var(--accent); font-weight: bold;">Cloud Solution Architect</span> · 9.5+ yrs in Infrastructure &amp; Cloud<br>
-      Azure · Windows Server · Terraform · PowerShell · Docker<br>
-      <span style="color: var(--muted); font-style: italic;">📍 Thane, India · 📧 sharma.kaustubh93@gmail.com</span>
-    </div>
-  </div>
+<div style="display: flex; align-items: center; gap: 0; overflow-x: auto;">
+  <pre style="white-space: pre; line-height: 1.2; margin: 0; font-family: inherit; color: var(--accent);">              ...:::::..                                                        
+           ..:--=======-                                                        
+         ..:--==========                                                        
+        .:--============                                                        
+       .-:---=========+=                                                        
+       .::=+++++========           .               .                            
+     ..::+*8W##W8*ooo**o    .8&amp; =W8. +Wo  oW: &amp;8..&amp;#8::WWWWW=&amp;8..8&amp;.8WW8= +W= oW:
+    .++:+*8W#@@#8++*#@@@    .@#.8@&amp;. 8@W  &amp;@- W@.o@@@&amp;-@@@@@+W@..@#.#@@@@.o@+ &amp;@-
+    .++:=++*&amp;&amp;&amp;*+--+W##@    .#W-@@: .#@#. &amp;@- W@:8@+@@=@@@@@+W@..@W.#@8@@-o@+ &amp;@-
+    .+=:::--=++=----+o**    .#W&amp;@&amp;  :@@@- &amp;@- W@:W#.o8::+@*:.W@..@W.## *@-o@= &amp;@-
+.... -====o**o=---:-=o=-    .#@@@-  =@&amp;@+ &amp;@- W@:8@#o   +@o  W@..@W.##+W@.o@W&amp;#@-
+.....:**o&amp;#####8**&amp;&amp;o**+    .#@@@=  o@+@* &amp;@- W@.o@@@*  +@o .W@..@W.#@@@&amp; o@@@@@-
+.....:&amp;W&amp;W@@#WWW##@@##W*    .#@@@&amp;  &amp;@:@8 &amp;@- W@:.&amp;@@@: +@o .W@..@W.#@#@@:o@@@@@-
+......o#W#@W***o**88#@@8    .#@W@#..W@+##.&amp;@- W@:..=#@= +@o .W@..@W.##.o@+o@*=W@-
+...-=:.W@@@8*&amp;8888&amp;*8@#W    .#@-W@-.@@@@@:*@=.##:#8 *@= +@o  8@::@W.## +@oo@= &amp;@-
+...:-+&amp;&amp;W@@#88W#@#88W@@@    .## &amp;@*-@@@@@-+@#8@W.#@-8@- +@o  &amp;@WW@&amp;.#@8#@oo@+ &amp;@-
++o*&amp;8@@&amp;oW@@#W8888W#@@@8    .@# +@Wo@o:o@o:@@@@* &amp;@@@#. +@o  =@@@@=.#@@@@-o@+ &amp;@-
+@@@@@@@o+o&amp;#@@@@@@@@#8&amp;W    .#W :##8@- -@&amp; o@@W: -#@@=  =@o  .&amp;@@8..#@@@&amp;.o@+ &amp;@-
+@@@@@@8o+++o*&amp;8WW8&amp;*o*#@    .:: .::::. .::  :-.   .-:   .:.   .--. .::::  .:. .:.
+@@@@#&amp;o+o+=+oo*oo+o*8@@@                                                        
+@@@@W+===+=++++++*&amp;W@@@@                                                        
+@@@@#=--------=+*&amp;#@@@@@</pre>
 </div>
+  <span style="color:var(--fg); font-weight: 500;">Welcome to Kaustubh's Terminal Portfolio</span>
 `,
 
     shutdownSequence: [
