@@ -1,158 +1,112 @@
-# 💻 Kaustubh's Terminal Portfolio
+# 💻 Kaustubh Terminal Portfolio
 
-An interactive terminal-style portfolio website built with vanilla HTML, CSS, and JavaScript. No frameworks, no build tools — just pure web tech.
+**An interactive terminal-style portfolio where every command tells my story.**
 
-> **[🌐 Live Demo](https://kaustubh-terminal.vercel.app)**
+### **[▶ Try the Live Demo](https://kaustubh-terminal.vercel.app)**
 
-![Commands](https://img.shields.io/badge/Commands-50%2B-brightgreen) ![Themes](https://img.shields.io/badge/Themes-3-blue) ![Build](https://img.shields.io/badge/Build-Static-orange)
+![Commands](https://img.shields.io/badge/commands-50%2B-brightgreen) ![Themes](https://img.shields.io/badge/themes-3-blue) ![Dependencies](https://img.shields.io/badge/dependencies-0-orange) ![Deploy](https://img.shields.io/badge/deploy-Vercel-black)
 
 ---
 
 ## ✨ Features
 
-- **50+ Interactive Commands** — from portfolio info to games, utilities, and network tools
-- **3 Themes** — Dark, Light, and Hacker (with distinct color palettes)
-- **Inline Auto-Suggestions** — faded ghost hints as you type
-- **Tab Auto-Complete** — press Tab to complete commands
-- **Command History** — navigate with ↑/↓ arrow keys
-- **Matrix Rain** — toggle the classic green rain overlay
-- **Hacker Mode** — fullscreen Hollywood-style hacking scene with 9 live panes
-- **Shutdown/Resume Simulation** — Linux-style boot sequence with sound effects
-- **Weather Widget** — auto-detects location, cached for 10 min
-- **Session Timer** — live uptime counter in the header
-- **Calendar with Today Highlight** — current date shown in a circle
-- **Reminder with Chime** — set timed reminders with pleasant notification sound
-- **Theme Toggle Button** — quick switch from the top bar
-- **Responsive** — works on desktop and mobile
-- **No Dependencies** — zero npm packages, zero build step
+- **50+ commands** — portfolio, games, utilities, network tools, and more
+- **3 themes** — Dark, Light, and Hacker (matrix green with glow effects)
+- **Smart input** — auto-suggestions, tab completion, command history (↑/↓)
+- **Matrix rain** — toggleable green rain overlay animation
+- **Hacker mode** — 9-pane Hollywood-style hacking scene
+- **Live widgets** — weather (auto-location), session uptime, calendar
+- **Shutdown sim** — Linux-style boot sequence with sound effects
+- **PWA-ready** — installable, responsive, CRT scanline effect
+- **Zero dependencies** — no npm, no build step, just open `index.html`
 
 ---
 
-## 🚀 Quick Start
+## 🛠️ Tech Stack
 
-```bash
-# Clone the repo
-git clone https://github.com/kaustubh93-dev/kaustubh-terminal.git
-
-# Open in browser
-cd kaustubh-terminal
-# Double-click index.html OR use a local server:
-npx serve .
-```
+| Layer | Tech |
+|-------|------|
+| **Frontend** | HTML5, CSS3, JavaScript (ES6+) |
+| **Font** | JetBrains Mono |
+| **APIs** | Open-Meteo · Quotable · GEO IP · GitHub |
+| **Hosting** | Vercel + Web Analytics |
 
 ---
 
-## 📦 Project Structure
+## ⌨️ Key Commands
 
-```
-kaustubh-terminal/
-├── index.html              # Main HTML — terminal layout, header, footer
-├── assets/
-│   ├── css/
-│   │   └── styles.css      # All styling — themes, animations, layouts
-│   └── js/
-│       ├── constants.js    # Config — banner, about, skills, projects, socials
-│       └── app.js          # Core logic — all 50+ command handlers
-├── robots.txt
-├── site.webmanifest
-└── README.md
-```
-
----
-
-## 🎮 Commands
-
-Type `help` to see all commands. Here's a highlight:
-
-| Category | Commands |
+| Category | Examples |
 |----------|----------|
-| **Portfolio** | `about`, `skills`, `projects`, `social`, `contact` |
-| **Themes** | `theme`, `set theme <name>` |
-| **Utilities** | `date`, `time`, `calendar`, `timer`, `stopwatch`, `remind`, `uptime`, `uuid` |
-| **Text Tools** | `echo`, `uppercase`, `lowercase`, `capitalize`, `reverse`, `base64`, `hash` |
-| **Network** | `weather`, `ip`, `geo`, `dns`, `ping`, `curl`, `json`, `github` |
-| **Fun** | `matrix`, `hacker`, `coin`, `dice`, `rps`, `ttt`, `emoji`, `quote`, `ascii` |
-| **Lookup** | `define`, `synonym`, `antonym`, `country`, `stock`, `translate` |
-| **System** | `whoami`, `sysinfo`, `history`, `clear`, `reset`, `shutdown`, `sudo` |
+| **Portfolio** | `about` · `skills` · `projects` · `social` · `contact` |
+| **Themes** | `theme` · `set theme hacker` |
+| **Utilities** | `weather` · `calendar` · `timer` · `stopwatch` · `remind` · `uuid` |
+| **Text** | `echo` · `uppercase` · `reverse` · `base64` · `hash` |
+| **Network** | `ip` · `geo` · `dns` · `ping` · `curl` · `github` |
+| **Fun** | `matrix` · `hacker` · `coin` · `dice` · `rps` · `ttt` · `ascii` |
+| **System** | `whoami` · `sysinfo` · `history` · `clear` · `shutdown` |
+
+> Type `help` for the full list.
 
 ---
 
 ## 🎨 Themes
 
-| Theme | Description |
-|-------|-------------|
-| **Dark** | Pure black background, white text — clean and minimal |
-| **Light** | White background, dark text — easy on the eyes |
-| **Hacker** | Black background, matrix green with cyan accents — full terminal vibes |
+Switch with the `theme` command or click the 🎨 button in the header.
 
-Switch with `theme` command or click the 🎨 button in the header.
+- **Dark** — pure black, white text, clean and minimal
+- **Light** — white background, dark text, easy on the eyes
+- **Hacker** — black + matrix green with cyan accents and glow
 
 ---
 
-## ⌨️ Keyboard Shortcuts
+## 🚀 Getting Started
 
-| Shortcut | Action |
-|----------|--------|
-| `Tab` | Auto-complete command |
-| `↑` / `↓` | Navigate command history |
-| `Ctrl+C` | Cancel current input |
-| `Ctrl+K` | Clear screen |
-| `Esc` | Exit Matrix / Hacker mode |
+```bash
+git clone https://github.com/kaustubh93-dev/kaustubh-terminal.git
+cd kaustubh-terminal
+```
+
+Open `index.html` in your browser — that's it. No install, no build.
+
+**Deploy to Vercel:** push to GitHub → import at [vercel.com](https://vercel.com) → done.
 
 ---
 
-## 🛠️ Customization
+## 📁 Project Structure
 
-All personal content is in **`assets/js/constants.js`**:
+```
+kaustubh-terminal/
+├── index.html            # Terminal layout and shell
+├── assets/
+│   ├── css/styles.css    # Themes, animations, responsive layout
+│   └── js/
+│       ├── app.js        # Core logic — all 50+ command handlers
+│       └── constants.js  # Personal config — bio, skills, projects, socials
+├── robots.txt
+├── site.webmanifest      # PWA manifest
+└── README.md
+```
+
+---
+
+## 🔧 Customization
+
+Edit **`assets/js/constants.js`** to make it yours:
 
 ```javascript
 window.TERM = {
-    site: {
-        domain: "your-domain.com",
-        owner: "Your Name",
-        email: "you@example.com",
-        socials: {
-            github: "https://github.com/you",
-            linkedin: "https://linkedin.com/in/you"
-        }
-    },
-    aboutText: [...],     // Your bio
-    skillsText: [...],    // Your skills
-    projectsText: [...],  // Your projects
+    site: { domain: "you.dev", owner: "Your Name", email: "you@example.com" },
+    aboutText: [...],      // Your bio
+    skillsText: [...],     // Your skills
+    projectsText: [...],   // Your projects
 };
 ```
 
 ---
 
-## 🌐 Deployment
-
-### Vercel (Recommended)
-1. Push to GitHub
-2. Go to [vercel.com](https://vercel.com) → Import repo
-3. Click Deploy — done! Auto-deploys on every push.
-
-### GitHub Pages
-1. Go to repo Settings → Pages
-2. Set source to `main` branch, root folder
-3. Your site is live at `https://username.github.io/repo-name`
-
-### Netlify
-1. Drag and drop the project folder at [netlify.com/drop](https://app.netlify.com/drop)
-
----
-
 ## 📄 License
 
-MIT License — feel free to fork and customize for your own portfolio.
-
----
-
-## 🙏 Credits
-
-- Inspired by [terminal.iabhinav.me](https://terminal.iabhinav.me/)
-- Font: [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
-- Weather: [Open-Meteo API](https://open-meteo.com/)
-- Quotes: [Quotable API](https://quotable.io/)
+MIT — fork it, customize it, make it yours.
 
 ---
 
