@@ -649,3 +649,18 @@ body {
     from { opacity: 1; }
     to { opacity: 0; transform: translateY(-10px); }
 }
+
+/* Respect reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    .crt-overlay {
+        animation: none;
+        opacity: 0.3;
+    }
+    .cursor {
+        animation: none;
+        opacity: 1;
+    }
+    .toast {
+        animation: none;
+    }
+}

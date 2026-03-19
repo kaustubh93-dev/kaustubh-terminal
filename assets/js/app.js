@@ -337,8 +337,8 @@
             }
             return;
         }
-        print(`GitHub:   <a href="${TERM.site.socials.github}" target="_blank" style="color:var(--accent); text-decoration:none">${TERM.site.socials.github}</a>`);
-        print(`LinkedIn: <a href="${TERM.site.socials.linkedin}" target="_blank" style="color:var(--accent); text-decoration:none">${TERM.site.socials.linkedin}</a>`);
+        print(`GitHub:   <a href="${TERM.site.socials.github}" target="_blank" rel="noopener noreferrer" style="color:var(--accent); text-decoration:none">${TERM.site.socials.github}</a>`);
+        print(`LinkedIn: <a href="${TERM.site.socials.linkedin}" target="_blank" rel="noopener noreferrer" style="color:var(--accent); text-decoration:none">${TERM.site.socials.linkedin}</a>`);
         print(`Email:    <a href="mailto:${TERM.site.email}" style="color:var(--accent); text-decoration:none">${TERM.site.email}</a>`);
     };
     commands.contact = (args) => commands.social(args);
@@ -418,14 +418,14 @@
     // --- User Info ---
     commands.whoami = () => {
         print(`Username: <span class='accent'>${escapeHtml(username)}</span>`);
-        print(`OS:       ${navigator.platform || 'Unknown'}`);
+        print(`OS:       ${navigator.userAgentData?.platform || navigator.platform || 'Unknown'}`);
         print(`Browser:  ${navigator.userAgent}`);
     };
     commands.username = () => print(escapeHtml(username));
 
     commands.sysinfo = () => {
         print(`Browser:    <span class='accent'>${navigator.userAgent}</span>`);
-        print(`Platform:   ${navigator.platform}`);
+        print(`Platform:   ${navigator.userAgentData?.platform || navigator.platform || 'Unknown'}`);
         print(`Language:   ${navigator.language}`);
         print(`Screen:     ${screen.width}×${screen.height}`);
         print(`Viewport:   ${window.innerWidth}×${window.innerHeight}`);
@@ -1077,7 +1077,7 @@
         const data = await fetchApi(`https://api.github.com/users/${encodeURIComponent(args[0])}`);
         if (data && data.login) {
             const joinDate = new Date(data.created_at).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
-            print(`<div style="display:flex; align-items:center; gap:15px; margin:8px 0;"><img src="${escapeHtml(data.avatar_url)}" style="width:60px; height:60px; border-radius:50%; border:2px solid var(--accent);" /><div><b>${escapeHtml(data.name || data.login)}</b><br>Member since: ${joinDate}<br>Repos: ${data.public_repos} | Followers: ${data.followers} | Following: ${data.following}<br>Profile: <a href="${escapeHtml(data.html_url)}" target="_blank" style="color:var(--accent)">${escapeHtml(data.html_url)}</a></div></div>`);
+            print(`<div style="display:flex; align-items:center; gap:15px; margin:8px 0;"><img src="${escapeHtml(data.avatar_url)}" style="width:60px; height:60px; border-radius:50%; border:2px solid var(--accent);" /><div><b>${escapeHtml(data.name || data.login)}</b><br>Member since: ${joinDate}<br>Repos: ${data.public_repos} | Followers: ${data.followers} | Following: ${data.following}<br>Profile: <a href="${escapeHtml(data.html_url)}" target="_blank" rel="noopener noreferrer" style="color:var(--accent)">${escapeHtml(data.html_url)}</a></div></div>`);
         } else print("User not found.", "err");
         isBusy = false;
     };
@@ -1096,7 +1096,7 @@
         print("Shortening URL...");
         try {
             const data = await fetchApi(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(args[0])}`, 'text');
-            if (data) print(`Shortened: <a href="${escapeHtml(data)}" target="_blank" class='accent'>${escapeHtml(data)}</a>`);
+            if (data) print(`Shortened: <a href="${escapeHtml(data)}" target="_blank" rel="noopener noreferrer" class='accent'>${escapeHtml(data)}</a>`);
             else print("Failed to shorten URL.", "err");
         } catch { print("Failed to shorten URL.", "err"); }
         isBusy = false;
@@ -1129,7 +1129,7 @@
                 const text = await res.text();
                 print("<pre>" + escapeHtml(text.substring(0, 2000)) + "</pre>");
             }
-            if (contentType.includes("json") || true) {}
+
         } catch (e) {
             print(`Error fetching ${escapeHtml(url)}: ${escapeHtml(e.message)}`, "err");
         }
@@ -1591,6 +1591,26 @@
         print("<br>");
         isBusy = false;
     }
+
+    // --- Mobile keyboard support ---
+    const mobileInput = document.createElement("input");
+    mobileInput.id = "mobile-input";
+    mobileInput.setAttribute("autocapitalize", "none");
+    mobileInput.setAttribute("autocomplete", "off");
+    mobileInput.setAttribute("autocorrect", "off");
+    mobileInput.setAttribute("spellcheck", "false");
+    mobileInput.style.cssText = "position:fixed;left:-9999px;top:0;opacity:0;width:1px;height:1px;";
+    document.body.appendChild(mobileInput);
+
+    terminalScreen.addEventListener("click", () => {
+        if ('ontouchstart' in window) mobileInput.focus();
+    });
+
+    mobileInput.addEventListener("input", () => {
+        buffer = mobileInput.value;
+        inputEl.textContent = buffer;
+        updateHint();
+    });
 
     bootSequence();
 })();
